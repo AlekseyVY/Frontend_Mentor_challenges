@@ -120,6 +120,9 @@ h2 {
 }
 
 @media only screen and (max-device-width: 375px) {
+    #mobile_img_div {
+        display: block;
+    }
     body {
         width: 375px;
         display: flex;
