@@ -61,6 +61,7 @@ svg {
     width: 100%;
 }
 
+
 #desktop_bg {
     position: absolute;
     top: -370px;
@@ -112,4 +113,112 @@ h2 {
     align-items: center;
     justify-content: space-between;
     border: none;
+}
+
+#mobile_img_id {
+    display: none;
+}
+
+@media only screen and (max-device-width: 375px) {
+    body {
+        width: 375px;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        background-image: linear-gradient(to bottom, hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+        color: hsl(238, 29%, 16%);
+        font-family: 'KumbhSans';
+        font-size: 12px;
+    }
+    
+    svg {
+        -webkit-transition-duration: 0.5s;
+        -moz-transition-duration: 0.5s;
+        -o-transition-duration: 0.5s;
+         transition-duration: 0.5s;
+    }
+    
+    #main_container {
+        position: relative;
+        margin-top: 100px;
+    }
+    
+    #faq_accordion_container {
+        padding: 0px;
+        height: 500px;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        width: 250px;
+        background-color: white;
+        box-shadow: 0px 10px 50px black;
+        position: relative;
+        padding-right: 70px;
+        overflow: visible;
+    }
+    
+    #img_div {
+        display: none;
+    }
+    
+    #content_div {
+        width: 250px;
+        display: flex;
+    }
+    
+    .attribution {
+        padding-top: 20px;
+        width: 100%;
+    }
+    
+    #desktop_bg {
+        display: none;
+    }
+    
+    #desktop_img {
+        display: none;
+    }
+    
+    #desktop_box {
+        display: none;
+    }
+    
+    #faq_text {
+        width: 100%;
+        border-bottom: solid 1px hsl(240, 5%, 91%);
+        margin: 10px;
+    }
+    
+    p {
+        margin: 10px;
+        font-weight: 400;
+    }
+    h2 {
+        margin: 10px;
+        margin-bottom: 0px;
+        font-weight: 700;
+    }
+    
+    .show:hover {
+        cursor: pointer;
+    }
+    
+    #faq_header {
+        width: 90%;
+        text-align: center;
+        margin: 10px;
+        margin-left: 40%;
+        margin-right: 50%;
+        border: none;
+    }
+    
+    h2 {
+        text-align: center;
+    }
+
+    #mobile_svg {
+        position: absolute;
+        top: -105px;
+        left: 15px;
+    }
 }
