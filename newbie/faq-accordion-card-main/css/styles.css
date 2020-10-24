@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'KumbhSans';
+    src: url(https://fonts.google.com/specimen/Kumbh+Sans)
+}
+
 body {
     width: 1440px;
     height: 100vh;
@@ -6,49 +11,119 @@ body {
     justify-content: center;
     align-items: center;
     background-image: linear-gradient(to bottom, hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+    color: hsl(238, 29%, 16%);
+    font-family: 'KumbhSans';
+    font-size: 12px;
+}
+
+#main_container {
+    position: relative;
 }
 
 #faq_accordion_container {
+    padding: 0px;
+    height: 500px;
     border-radius: 20px;
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 800px;
     background-color: white;
     box-shadow: 0px 10px 50px black;
+    position: relative;
+    overflow: hidden;
+    padding-right: 70px;
 }
 
 #img_div {
     width: 350px;
-    background-image: url("../images/bg-pattern-desktop.svg");
     flex-grow: 1;
     padding-right: 50px;
+    position: relative;
 }
 
 #content_div {
     width: 350px;
     padding-left: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-#first_hide {
+#hide_1 {
+    display: none;
+    width: 100%;
+}
+
+#hide_2 {
     display: none;
 }
 
-#second_hide {
+#hide_3 {
     display: none;
 }
 
-#third_hide {
+#hide_4 {
     display: none;
 }
 
-#fourth_hide {
-    display: none;
-}
-
-#fifth_hide {
+#hide_5 {
     display: none;
 }
 
 .attribution {
     width: 100%;
+}
+
+#desktop_bg {
+    position: absolute;
+    top: -370px;
+    left: -583px;
+    z-index: 1;
+}
+
+#desktop_img {
+    position: relative;
+    left: -80px;
+    z-index: 2;
+}
+
+#desktop_box {
+    position: absolute;
+    top: 185px;
+    left: -92px;
+    z-index: 3;
+}
+
+#faq_text {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    border-bottom: solid 1px hsl(240, 5%, 91%);
+    margin: 10px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+p {
+    margin: 10px;
+    font-weight: 400;
+}
+h2 {
+    margin: 10px;
+    margin-bottom: 0px;
+    font-weight: 700;
+}
+
+.show:hover {
+    cursor: pointer;
+}
+
+#faq_header {
+    display: flex;
+    width: 90%;
+    margin: 10px;
+    align-items: center;
+    justify-content: space-between;
+    border: none;
 }
