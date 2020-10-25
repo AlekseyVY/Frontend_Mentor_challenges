@@ -1,80 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap');
+
 @mixin rating {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-    border: solid 1px black;
+    justify-content: space-between;
+    padding: 0px 30px 0px;
     margin: 5px;
+    border-radius: 5px;
+    background-color: hsl(300, 24%, 96%);
+    #rating_stars {
+        padding-right: 20px;
+    }
 }
 
 @mixin card {
     margin: 5px;
-    border: solid 1px black;
+    border-radius: 5px;
+    padding:  20px;
     width: 30%;
     display: flex;
     flex-wrap: wrap;
+    background-color: hsl(300, 43%, 22%);
+    .name_cerify {
+        padding-left: 20px;
+        align-self: center;
+        p {
+            margin: 5px;
+        }
+    }
+    .img_avatar {
+        border-radius: 50%;
+    }
 }
 
 body {
+    background-color: hsl(300, 24%, 96%);
     width: 1440px;
     height: 100vh;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    font-family: 'Spartan', sans-serif;
     font-size: 15px;
+    color: hsl(300, 43%, 22%);
 
     #social_proof_container {
+        position: relative;
+        overflow: hidden;
+        background-color: hsl(0, 0%, 100%);
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        width: 900px;
-        border: solid 1px black;
+        width: 1000px;
+        border-radius: 5px;
+        box-shadow: 0px 10px 50px hsl(300, 43%, 22%);
         padding: 100px;
+
+        #top_bg_img {
+            position: absolute;
+            z-index: 1;
+            top: -30px;
+            left: -100px;
+        }
+
+        #bottom_img_bg {
+            position: absolute;
+            top: -300px;
+            left: 100px;
+        }
+
+        .main_text {
+            font-weight: 700;
+        }
+
+        .secondary_text {
+            font-weight: 300;
+        }
     
         #top_content {
+            position: relative;
             display: flex;
+            justify-content: space-between;
             width: 100%;
             height: 50%;
+
     
             #top_left {
-                width: 50%;
+                width: 30%;
             }
             #top_right {
                 display: flex;
                 flex-direction: column;
-                width: 50%;
+                width: 60%;
                 height: 100%;
-    
+
                 #rating_1 {
+                    align-self: flex-start;
                     @include rating()
                 }
                 #rating_2 {
+                    align-self: center;
                     @include rating()
                 }
                 #rating_3 {
+                    align-self: flex-end;
                     @include rating()
                 }
             }
         }
     
         #bottom_content {
+            position: relative;
             display: flex;
+            height: 280px;
             width: 100%;
             justify-content: space-evenly;
-    
+            color: hsl(0, 0%, 100%);
+
+            .verified_buyer {
+                color: hsl(333, 80%, 67%);
+            }
+
             #card_1 {
+                align-self: start;
                 @include card()
             }
             #card_2 {
+                align-self: center;
                 @include card()
             }
             #card_3 {
+                align-self: flex-end;
                 @include card()
             }
         }
     }
 
     .attribution {
+        margin-top: 50px;
+        margin-bottom: 50px;
         width: 100%;
     }
 }
